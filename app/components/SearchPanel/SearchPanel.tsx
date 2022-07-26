@@ -1,23 +1,23 @@
 import { links } from './searchPanel.data'
-import { FC, useState } from 'react'
+import { ChangeEvent, FC, useState } from 'react'
 
 import styles from './SearchPanel.module.scss'
 
-const SearchPanel: FC = () => {
-	const [value, setValue] = useState('турбомани')
+interface IProps {
+	value: string | string[]
+	handleChange: (e: ChangeEvent<HTMLInputElement>) => void
+	handleClear: () => void
+}
 
+const SearchPanel: FC<IProps> = ({ handleChange, value, handleClear }) => {
 	return (
 		<div className={styles.wrapper}>
 			<div className={styles.field}>
 				<div className={styles.fieldWrapper}>
-					<input
-						type="text"
-						value={value}
-						onChange={(e) => setValue(e.target.value)}
-					/>
+					<input type="text" value={value} onChange={handleChange} />
 				</div>
 				<div className={styles.nav}>
-					<button className={styles.navItem} onClick={() => setValue('')}>
+					<button className={styles.navItem} onClick={handleClear}>
 						<img
 							src="https://zaim-24.kz/google/img/menu-close-grey.png"
 							alt="close"

@@ -1,0 +1,37 @@
+.wrapper {
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+	margin: 28px 0 30px;
+
+	.numbers {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		margin-top: 5px;
+		width: 100%;
+		padding-left: 100px;
+
+		> div {
+			display: flex;
+
+			.link {
+				margin-right: 10px;
+				color: #1a0dab;
+				font-size: 14px;
+
+				&:first-child {
+					color: #000;
+					cursor: default;
+					pointer-events: none;
+				}
+			}
+		}
+
+		.next {
+			color: #1a0dab;
+			font-size: 14px;
+			margin-left: 55px;
+		}
+	}
+}

@@ -34,13 +34,12 @@ app
 		server.post(
 			'/api/links',
 			asyncHandler(async (req, res) => {
-				const { title, domain, url, isOffer, subTitle } = req.body
+				const { title, domain, url, subTitle } = req.body
 
 				const link = await Link.create({
 					title,
 					domain,
 					url,
-					isOffer,
 					subTitle,
 				})
 

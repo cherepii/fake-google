@@ -14,7 +14,6 @@ const DynamicLinkItem = dynamic(() => import('./LinkItem'), { ssr: false })
 
 const Content: FC<IProps> = ({ links }) => {
 	const shuffle = (array: Array<ILink>) => {
-		console.log(array)
 		return array.sort(() => Math.random() - 0.5)
 	}
 

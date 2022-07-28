@@ -31,6 +31,26 @@ app
 			})
 		)
 
+		server.put(
+			'/api/links',
+			asyncHandler(async (req, res) => {
+				const { _id, title, domain, url, subTitle } = req.body
+
+				const link = await Link.findByIdAndUpdate(
+					_id,
+					{
+						title,
+						domain,
+						url,
+						subTitle,
+					},
+					{ new: true }
+				)
+
+				res.json(link)
+			})
+		)
+
 		server.post(
 			'/api/links',
 			asyncHandler(async (req, res) => {

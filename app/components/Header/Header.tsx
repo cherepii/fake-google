@@ -2,7 +2,7 @@ import Logo from '../Logo/Logo'
 import SearchPanel from '../SearchPanel/SearchPanel'
 import { links } from '../SearchPanel/searchPanel.data'
 import { useRouter } from 'next/router'
-import { ChangeEvent, FC, useEffect, useState } from 'react'
+import { FC, useEffect, useState } from 'react'
 
 import styles from './Header.module.scss'
 

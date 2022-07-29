@@ -1,7 +1,6 @@
 import { instance } from '../../api/instance'
 import { ILink } from '../../shared/link.interface'
-import Link from 'next/link'
-import { ChangeEvent, FC, FormEvent, FormEventHandler, useState } from 'react'
+import { ChangeEvent, FC, FormEvent, useState } from 'react'
 
 import styles from './AdminPanel.module.scss'
 
@@ -25,7 +24,7 @@ const LinkItem: FC<IProps> = ({ link }) => {
 			title: titleValue,
 			domain: domainValue,
 			url: urlValue,
-			subTitle: subTitle,
+			subTitle: subTitleValue,
 		})
 
 		if (res.status === 200) location.reload()

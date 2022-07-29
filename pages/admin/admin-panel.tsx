@@ -1,21 +1,13 @@
-import { instance } from '../../app/api/instance'
+import HeadProvider from '../../app/providers/HeadProvider'
 import AdminPanel from '../../app/screens/adminPanel/AdminPanel'
-import { ILink } from '../../app/shared/link.interface'
-import { GetStaticProps, NextPage } from 'next'
+import type { NextPage } from 'next'
 
-const AdminPanelPage: NextPage<{ links: ILink[] }> = ({ links }) => {
-	return <AdminPanel links={links} />
+const AdminPanelPage: NextPage = () => {
+	return (
+		<HeadProvider title="Admin panel">
+			<AdminPanel />
+		</HeadProvider>
+	)
 }
+
 export default AdminPanelPage
-
-export const getStaticProps: GetStaticProps = async (context) => {
-	const res = await instance.get('/links')
-
-	const links = res.data
-
-	return {
-		props: {
-			links,
-		},
-	}
-}

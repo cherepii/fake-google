@@ -1,5 +1,5 @@
 import { ILink } from '../../shared/link.interface'
-import Pagination from '../Paginaion/Pagination'
+import Pagination from '../Pagination/Pagination'
 import SimilarQuery from '../SimilarQuery/SimilarQuery'
 import dynamic from 'next/dynamic'
 import { FC } from 'react'

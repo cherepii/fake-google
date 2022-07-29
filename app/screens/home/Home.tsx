@@ -1,13 +1,18 @@
+import { instance } from '../../api/instance'
 import Content from '../../components/Content/Content'
 import Header from '../../components/Header/Header'
 import { ILink } from '../../shared/link.interface'
-import { FC } from 'react'
+import { FC, useEffect, useState } from 'react'
 
-interface IProps {
-	links: ILink[]
-}
+const Home: FC = () => {
+	const [links, setLinks] = useState([])
 
-const Home: FC<IProps> = ({ links }) => {
+	useEffect(() => {
+		const res = instance.get<ILink[]>('/links')
+
+		res.then((data) => setLinks(data.data))
+	}, [])
+
 	return (
 		<div>
 			<Header />

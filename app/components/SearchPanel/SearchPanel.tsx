@@ -1,5 +1,4 @@
-import { links } from './searchPanel.data'
-import { ChangeEvent, FC, useState } from 'react'
+import { ChangeEvent, FC } from 'react'
 
 import styles from './SearchPanel.module.scss'
 

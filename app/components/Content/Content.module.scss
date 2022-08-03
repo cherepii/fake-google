@@ -2,6 +2,12 @@
 	margin: 6px 0 0 200px;
 	max-width: 652px;
 
+	@media screen and (max-width: 950px) {
+		max-width: 100%;
+		margin: 0;
+		padding: 8px 18px;
+	}
+
 	> span {
 		line-height: 43px;
 		font-size: 14px;
@@ -11,6 +17,15 @@
 
 .item {
 	margin-top: 25px;
+
+	@media screen and (max-width: 950px) {
+		box-shadow: 0 1px 6px rgb(32 33 36 / 28%);
+		border-bottom: 1px hidden #fff;
+		border-radius: 8px;
+		padding: 10px 15px;
+		margin-top: 12px;
+	}
+
 	> p {
 		line-height: 1.6;
 		font-size: 14px;

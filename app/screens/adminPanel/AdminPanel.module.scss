@@ -1,7 +1,16 @@
 .wrapper {
 	margin: 6px 0 0 200px;
 	max-width: 692px;
+	width: 100%;
 	padding: 25px 0;
+
+	@media screen and (max-width: 948px) {
+		margin: 0 auto;
+	}
+	@media screen and (max-width: 750px) {
+		max-width: 100%;
+		padding: 18px;
+	}
 }
 
 .item {
